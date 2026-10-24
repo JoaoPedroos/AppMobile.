@@ -17,10 +17,10 @@ public final class CriptoHasher {
   try {
    String[] p=stored.split(":"); int count=Integer.parseInt(p[0]);
    if(count<1 || count>2000000)return false;
-   return MessageDigest.isEqual(Base64.getDecoder().decode(p[2]),derive(password,Base64.getDecoder().decode(p[1]),count));
+   return MessageDigest.isEqual(Base64.getDecoder().decode(p[2]),derive(senha,Base64.getDecoder().decode(p[1]),count));
   } catch(RuntimeException e) { return false; }
  }
- private static byte[] derive(String password,byte[] salt,int count) {
+ private static byte[] derive(String senha,byte[] salt,int count) {
   char[] chars=senha.toCharArray(); PBEKeySpec spec=new PBEKeySpec(chars,salt,count,256);
   try { return SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256").generateSecret(spec).getEncoded(); }
   catch(Exception e) { throw new IllegalStateException("Não é possivel proteger a senha.",e); }
