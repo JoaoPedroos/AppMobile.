@@ -9,10 +9,10 @@ public class RegisterActivity extends BaseActivity {
  private void save() {
   String name=input(R.id.name),email=input(R.id.email),cpf=input(R.id.cpf),password=input(R.id.password);
   boolean bad=false;
-  bad=error(R.id.name,Validators.nameError(name))||bad;
-  bad=error(R.id.email,Validators.emailError(email))||bad;
-  bad=error(R.id.cpf,Validators.cpfValid(cpf)?null:"Informe um CPF válido.")||bad;
-  bad=error(R.id.password,Validators.passwordError(password))||bad;
+  bad=error(R.id.name,Validar.nameError(name))||bad;
+  bad=error(R.id.email,Validar.emailError(email))||bad;
+  bad=error(R.id.cpf,Validar.cpfValid(cpf)?null:"Informe um CPF válido.")||bad;
+  bad=error(R.id.password,Validar.passwordError(password))||bad;
   bad=error(R.id.confirm,password.equals(input(R.id.confirm))?null:"As senhas não coincidem.")||bad;
   if(bad)return;
   task(()->repo().register(name,email,cpf,password),id-> {
