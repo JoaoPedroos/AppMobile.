@@ -6,9 +6,9 @@ import java.util.Base64;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 /** PBKDF2 com salt aleatório por senha; nunca armazena senha em texto puro. */
-public final class PasswordHasher {
+public final class CriptoHasher {
  private static final int ITERATIONS=600000;
- private PasswordHasher() {}
+ private CriptoHasher() {}
  public static String hash(String senha) {
   byte[] salt=new byte[16]; new SecureRandom().nextBytes(salt);
   return ITERATIONS+":"+Base64.getEncoder().encodeToString(salt)+":"+Base64.getEncoder().encodeToString(derive(senha,salt,ITERATIONS));
