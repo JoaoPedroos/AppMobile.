@@ -5,7 +5,7 @@ public class LoginActivity extends BaseActivity {
   super.onCreate(state);setContentView(R.layout.activity_login);
   findViewById(R.id.login).setOnClickListener(v-> {
    String email=input(R.id.email),password=input(R.id.password);
-   if(error(R.id.email,Validators.emailError(email)))return;
+   if(error(R.id.email,Validar.emailError(email)))return;
    if(error(R.id.password,password.isEmpty()?"Informe a senha.":null))return;
    task(()->repo().login(email,password),id->{app().userId=id;((android.widget.EditText)findViewById(R.id.password)).setText("");go(DashboardActivity.class);finish();});
   });
