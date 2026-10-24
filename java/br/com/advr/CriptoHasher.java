@@ -13,7 +13,7 @@ public final class PasswordHasher {
   byte[] salt=new byte[16]; new SecureRandom().nextBytes(salt);
   return ITERATIONS+":"+Base64.getEncoder().encodeToString(salt)+":"+Base64.getEncoder().encodeToString(derive(senha,salt,ITERATIONS));
  }
- public static boolean matches(String password,String stored) {
+ public static boolean matches(String senha,String stored) {
   try {
    String[] p=stored.split(":"); int count=Integer.parseInt(p[0]);
    if(count<1 || count>2000000)return false;
