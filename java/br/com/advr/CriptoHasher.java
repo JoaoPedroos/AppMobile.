@@ -23,7 +23,7 @@ public final class PasswordHasher {
  private static byte[] derive(String password,byte[] salt,int count) {
   char[] chars=password.toCharArray(); PBEKeySpec spec=new PBEKeySpec(chars,salt,count,256);
   try { return SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256").generateSecret(spec).getEncoded(); }
-  catch(Exception e) { throw new IllegalStateException("Não foi possível proteger a senha.",e); }
+  catch(Exception e) { throw new IllegalStateException("Não é possivel proteger a senha.",e); }
   finally { spec.clearPassword(); Arrays.fill(chars,'\0'); }
  }
 }
