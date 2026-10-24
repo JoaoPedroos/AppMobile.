@@ -1,0 +1,15 @@
+<resources>
+<color name="primary">#2563EB</color>
+<color name="primary_dark">#1D4ED8</color>
+<color name="primary_soft">#EFF6FF</color>
+<color name="canvas">#F8FAFC</color>
+<color name="surface">#FFFFFF</color>
+<color name="ink">#0F172A</color>
+<color name="muted">#64748B</color>
+<color name="border">#E2E8F0</color>
+<color name="success">#047857</color>
+<color name="success_soft">#ECFDF5</color>
+<color name="danger">#DC2626</color>
+<color name="danger_soft">#FEF2F2</color>
+<color name="inactive">#94A3B8</color>
+</resources>

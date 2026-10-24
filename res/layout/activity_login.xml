@@ -1,0 +1,18 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/canvas">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+  <ImageView android:layout_width="68dp" android:layout_height="68dp" android:layout_gravity="center" android:layout_marginTop="30dp" android:layout_marginBottom="18dp" android:background="@drawable/bg_primary_solid" android:padding="16dp" android:src="@drawable/ic_scale" android:tint="@color/surface" android:importantForAccessibility="no" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Title" android:text="ADVR Jurídico" android:gravity="center" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Body" android:text="Sua justiça simplificada na palma da mão" android:gravity="center" android:layout_marginBottom="32dp" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Label" android:text="E-mail cadastrado" android:labelFor="@+id/email" />
+  <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/email" style="@style/Field" android:hint="seu.email@exemplo.com" android:inputType="textEmailAddress" android:singleLine="true" android:drawableStart="@drawable/ic_user" android:drawablePadding="10dp" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Label" android:text="Senha" android:labelFor="@+id/password" />
+  <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/password" style="@style/Field" android:hint="Digite sua senha" android:inputType="textPassword" android:singleLine="true" android:drawableStart="@drawable/ic_lock" android:drawablePadding="10dp" />
+  <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/toggle_password" style="@style/LinkButton" android:text="Mostrar senha" android:layout_gravity="end" />
+  <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/login" style="@style/PrimaryButton" android:text="Entrar na conta" android:drawableEnd="@drawable/ic_arrow" android:drawableTint="@color/surface" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Body" android:text="Ainda não tem uma conta?" android:gravity="center" android:layout_marginTop="10dp" />
+  <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/register" style="@style/LinkButton" android:text="Criar nova conta" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Body" android:text="Acesso ao seu painel jurídico" android:gravity="center" android:layout_marginTop="10dp" />
+  <ProgressBar android:id="@+id/progress" android:layout_width="28dp" android:layout_height="28dp" android:layout_gravity="center" android:visibility="gone" />
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Body" android:text="" android:id="@+id/message" android:textColor="@color/danger" android:accessibilityLiveRegion="polite" android:visibility="gone" />
+ </LinearLayout>
+</ScrollView>

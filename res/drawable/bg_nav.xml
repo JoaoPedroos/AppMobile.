@@ -1,0 +1,1 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android"><item android:state_selected="true" android:drawable="@drawable/bg_nav_selected"/><item><shape><solid android:color="@android:color/transparent"/></shape></item></selector>

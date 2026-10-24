@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent" android:layout_height="match_parent"
+ android:orientation="vertical" android:background="@color/canvas">
+ <include layout="@layout/include_header"/>
+ <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_hero_client" android:padding="22dp" android:layout_marginBottom="20dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Title" android:id="@+id/welcome" android:text="Bem-vindo" android:textColor="@color/surface"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Body" android:text="Você está conectado ao ADVR Jurídico." android:textColor="#DBEAFE"/>
+   </LinearLayout>
+   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" style="@style/Card">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Section" android:text="Dashboard"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Body" android:text="Login realizado com sucesso."/>
+   </LinearLayout>
+   <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/logout" style="@style/DangerButton" android:text="Sair da conta"/>
+   <ProgressBar android:id="@+id/progress" android:layout_width="28dp" android:layout_height="28dp" android:layout_gravity="center" android:visibility="gone"/>
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Body" android:id="@+id/message" android:textColor="@color/danger" android:visibility="gone" android:accessibilityLiveRegion="polite"/>
+  </LinearLayout>
+ </ScrollView>
+</LinearLayout>
